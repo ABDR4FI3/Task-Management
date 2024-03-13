@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPF_APP_Project.BackOffice"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_APP_Project"
+        mc:Ignorable="d"
+        Title="BackOffice" Height="450" Width="800">
+    <Canvas Background="#B8A6B4">
+        <Canvas Background="#312F3D" Width="264" Height="434" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button Content="Add" FontSize="20" Canvas.Left="132" Canvas.Top="120" Height="40" Width="124" Click="Button_Click"/>
+            <TextBlock Canvas.Left="51" TextWrapping="Wrap" Text="Operation allowed" FontSize="20" FontFamily="Aerial" Foreground="White" Canvas.Top="33"/>
+            <Button Content="Edit" FontSize="20" Canvas.Left="130" Canvas.Top="197" Height="40" Width="124" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click_1"/>
+            <Button Content="Delete" FontSize="20" Canvas.Left="130" Canvas.Top="283" Height="40" Width="124" HorizontalAlignment="Left" VerticalAlignment="Top" Click="Button_Click_2"/>
+            <TextBlock TextWrapping="Wrap" FontSize="20" FontFamily="Aerial" Foreground="White" Canvas.Top="72" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Left="43" Height="36"><Run Text="Enter Employee ID "/><LineBreak/><Run/></TextBlock>
+            <TextBox x:Name="idField" Canvas.Left="43" TextWrapping="Wrap" Text="" Canvas.Top="254" Width="82" Height="30" FontFamily="Arial" FontSize="20"/>
+        </Canvas>
+        <TextBlock Canvas.Left="335" TextWrapping="Wrap" Text="Admin Dashboard" FontSize="20" FontFamily="Arial" Canvas.Top="26"/>
+        <TextBlock Canvas.Left="335" Foreground="#37200E" TextWrapping="Wrap" FontSize="20" FontFamily="Arial" Canvas.Top="65" HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="Employee List :"/><LineBreak/><Run/></TextBlock>
+        <DataGrid x:Name="datagrid" Height="250" Width="410" d:ItemsSource="{d:SampleData ItemCount=10}" Background="White" Canvas.Left="335" Canvas.Top="116">
+            <!-- Your DataGrid columns and other configurations go here -->
+        </DataGrid>
+
+    </Canvas>
+</Window>
